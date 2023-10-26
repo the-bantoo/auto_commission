@@ -126,6 +126,17 @@ app_license = "MIT"
 #	}
 # }
 
+doc_events = {
+    "Sales Invoice": {
+        "on_update": [
+            "auto_commission.app.verify_partner"
+        ],
+        "on_submit": [
+            "auto_commission.app.make_journal_entry"
+        ]
+    }
+}
+
 # Scheduled Tasks
 # ---------------
 
